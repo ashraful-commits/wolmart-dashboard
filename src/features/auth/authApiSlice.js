@@ -7,7 +7,7 @@ export const RegisterUser = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:5050/api/v1/auth/register",
+        "https://wolmart-server-2.onrender.com/api/v1/auth/register",
         data,
       );
       return response.data;
@@ -21,7 +21,7 @@ export const updateUser = createAsyncThunk(
   async ({Id,input}) => {
     try {
       const response = await axios.put(
-        `http://localhost:5050/api/v1/auth/register/${Id}`,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/register/${Id}`,
         input,
       );
       return response.data;
@@ -36,7 +36,7 @@ export const updateUserPassword = createAsyncThunk(
     console.log(data)
     try {
       const response = await axios.patch(
-        `http://localhost:5050/api/v1/auth/passwrod/${Id}`,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/passwrod/${Id}`,
         {...data},
       );
       return response.data;
@@ -48,7 +48,7 @@ export const updateUserPassword = createAsyncThunk(
 export const LoginUser = createAsyncThunk("auth/LoginUser", async (data) => {
   try {
     const response = await axios.post(
-      "http://localhost:5050/api/v1/auth/login",
+      "https://wolmart-server-2.onrender.com/api/v1/auth/login",
       data,{withCredentials:true}
     );
     return response.data;
@@ -59,7 +59,7 @@ export const LoginUser = createAsyncThunk("auth/LoginUser", async (data) => {
 export const LogoutUser = createAsyncThunk("auth/LogoutUser", async () => {
   try {
     const response = await axios.get(
-      "http://localhost:5050/api/v1/auth/logout",
+      "https://wolmart-server-2.onrender.com/api/v1/auth/logout",
       {withCredentials:true}
     );
     return response.data;
@@ -69,7 +69,7 @@ export const LogoutUser = createAsyncThunk("auth/LogoutUser", async () => {
 });
 export const LogedinUser = createAsyncThunk("auth/LogedinUser", async () => {
   try {
-    const response =await axios.get("http://localhost:5050/api/v1/auth/me",{withCredentials:true});
+    const response =await axios.get("https://wolmart-server-2.onrender.com/api/v1/auth/me",{withCredentials:true});
 
     return response.data
   } catch (error) {

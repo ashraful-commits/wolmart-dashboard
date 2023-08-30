@@ -7,7 +7,7 @@ export const getAllPermission = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5050/api/v1/permission",
+        "https://wolmart-server-2.onrender.com/api/v1/permission",
      {withCredentials:true}
       );
       return response.data;
@@ -21,7 +21,7 @@ export const getAllRole = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5050/api/v1/role",
+        "https://wolmart-server-2.onrender.com/api/v1/role",
      {withCredentials:true}
       );
       return response.data;
@@ -35,7 +35,7 @@ export const createPermission = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:5050/api/v1/permission",
+        "https://wolmart-server-2.onrender.com/api/v1/permission",
      data,{withCredentials:true}
       );
       return response.data
@@ -49,7 +49,7 @@ export const createRole = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:5050/api/v1/role",
+        "https://wolmart-server-2.onrender.com/api/v1/role",
      data,{withCredentials:true}
       );
       return response.data
@@ -63,7 +63,7 @@ export const deletePermission = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5050/api/v1/permission/${id}`,
+        `https://wolmart-server-2.onrender.com/api/v1/permission/${id}`,
      {withCredentials:true}
       );
       return response.data;
@@ -77,7 +77,7 @@ export const deleteRole = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5050/api/v1/role/${id}`,
+        `https://wolmart-server-2.onrender.com/api/v1/role/${id}`,
      {withCredentials:true}
       );
       return response.data;
@@ -91,7 +91,7 @@ export const updateStatusPermission = createAsyncThunk(
   async ({id,status}) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5050/api/v1/permission/${id}`,{status:!status},
+        `https://wolmart-server-2.onrender.com/api/v1/permission/${id}`,{status:!status},
      {withCredentials:true}
       );
       return response.data;
@@ -105,7 +105,7 @@ export const updateStatusRole = createAsyncThunk(
   async ({id,status}) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5050/api/v1/role/${id}`,{status:!status},
+        `https://wolmart-server-2.onrender.com/api/v1/role/${id}`,{status:!status},
      {withCredentials:true}
       );
       return response.data;
@@ -119,7 +119,7 @@ export const updateRole = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.put(
-        `http://localhost:5050/api/v1/role/${data.id}`,data,
+        `https://wolmart-server-2.onrender.com/api/v1/role/${data.id}`,data,
      {withCredentials:true}
       );
       return response.data;
@@ -133,7 +133,7 @@ export const UserCreate = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.post(
-        `http://localhost:5050/api/v1/auth/createuser`,data,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/createuser`,data,
      {withCredentials:true}
       );
       return response.data;
@@ -147,7 +147,7 @@ export const getAllUserData = createAsyncThunk(
   async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5050/api/v1/auth/register`,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/register`,
      {withCredentials:true}
       );
       return response.data;
@@ -162,7 +162,7 @@ export const DeletUserData = createAsyncThunk(
   async (id) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5050/api/v1/auth/${id}`,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/${id}`,
      {withCredentials:true}
       );
       return response.data;
@@ -176,7 +176,7 @@ export const updateUserData = createAsyncThunk(
   async (data) => {
     try {
       const response = await axios.put(
-        `http://localhost:5050/api/v1/auth/createuser/${data.id}`,data,
+        `https://wolmart-server-2.onrender.com/api/v1/auth/createuser/${data.id}`,data,
      {withCredentials:true}
       );
       return response.data;
